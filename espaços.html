@@ -131,35 +131,34 @@
         <footer>
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-              <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="#" target="_blank">Espaco.com</a></p>
+              <p class="h6">&copy& All right Reversed.<a class="text-green ml-2" href="#" target="_blank">Espaco.com</a></p>
             </div>
-              </hr>
+              <hr />
           </div>	
         </footer>   
         
-        <script>
-            function myFunction() {
-              // Declare variables 
-              var input, filter, table, tr, td, i, txtValue;
-              input = document.getElementById("myInput");
-              filter = input.value.toUpperCase();
-              table = document.getElementById("myTable");
-              tr = table.getElementsByTagName("tr");
-            
-              // Loop through all table rows, and hide those who don't match the search query
-              for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                  txtValue = td.textContent || td.innerText;
-                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                  } else {
-                    tr[i].style.display = "none";
-                  }
-                } 
-              }
+    <script>
+      function myFunction() {
+ 
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+      
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+               tr[i].style.display = "none";
             }
-            </script>     
+          } 
+        }
+      }
+    </script>     
         
   </body>
 </html>
